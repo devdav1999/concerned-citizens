@@ -9,29 +9,25 @@ function WriteArticle(props) {
   const [content, setContent] = useState('');
 
   function inputContent(event) {
-    let value = setContent(event.target.value);
-    setContent(value);
+    setContent(event.target.value);
   }
 
   function inputName(event) {
-    let value = setName(event.target.value);
+    setName(event.target.value);
     console.log('inputName being clicked');
-    setName(value);
   }
 
   function inputAddress(event) {
-    let value = setAddress(event.target.value);
-    setAddress(value);
+    setAddress(event.target.value);
+
   }
 
   function inputOfficialInfo(event) {
-    let value = setOfficialInfo(event.target.value);
-    setOfficialInfo(value);
+    setOfficialInfo(event.target.value);
   }
 
   function inputReason(event) {
-    let value = setReason(event.target.value);
-    setReason(value);
+    setReason(event.target.value);
   }
 
   function submit() {
