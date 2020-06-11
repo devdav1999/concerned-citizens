@@ -1,7 +1,20 @@
+.Container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.WriteArticle {
+	grid-column: 1;
+}
+
+.GenerateLetter {
+	grid-column: 2 / span 2;
+}
+
 .WriteArticle input,
 .WriteArticle textarea,
 .WriteArticle button {
-  font-size: 24pt;
+  font-size: 14pt;
   background: none;
   color: white;
   padding: 10px;
@@ -14,3 +27,4 @@
   color: black;
   background: #61dafb;
 }
+

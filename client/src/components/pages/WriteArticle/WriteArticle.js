@@ -35,7 +35,7 @@ function WriteArticle(props) {
     const formData = {
       name: name,
       address: address,
-      officialInfo: officialInfo,
+      officialinfo: officialInfo,
       reason: reason,
       text: content,
     };
@@ -57,6 +57,7 @@ function WriteArticle(props) {
   }
 
   return (
+    <div className="Container">
     <div className="WriteArticle">
       <h1>Write a letter as a concerned citizen</h1>
       <input
@@ -102,7 +103,8 @@ function WriteArticle(props) {
 
       <button onClick={submit}>Submit</button>
 
-<br></br>
+    <div className="GenerateLetter">
+      <br></br>
 
       Address: {address}
 
@@ -118,6 +120,9 @@ function WriteArticle(props) {
       Sincerely,
       <br></br>
       {name}
+    </div>
+
+    </div>
     </div>
   );
 }
