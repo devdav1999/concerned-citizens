@@ -39,7 +39,7 @@ function WriteArticle(props) {
     <div className="WriteArticle">
       <header className="template-header">
       <img src={logo} className="templatePage-logo" alt="Concerned Citizens Logo"/>
-      <p>Compose Your Template</p>
+      <p><strong>Compose Your Template</strong></p>
       </header>
 
       <br />
