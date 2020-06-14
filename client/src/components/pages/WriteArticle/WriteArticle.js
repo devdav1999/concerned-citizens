@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button } from 'kc-react-widgets';
 import './WriteArticle.css';
 import logo from './logo2.png';
+import TextareaAutosize from 'react-textarea-autosize';
 
 function WriteArticle(props) {
   const [title, setTitle] = useState('');
@@ -41,15 +42,20 @@ function WriteArticle(props) {
       <img src={logo} className="templatePage-logo" alt="Concerned Citizens Logo"/>
       <p><strong>Compose Your Template</strong></p>
       </header>
+      <div className="subHeader">
+      <p>Start typing below to share with your connections and begin your campaign</p>
+      </div>
 
       <br />
 
-      <textarea
-          name="content"
-          placeholder="Contents"
-          value={content}
-          onChange={onChangeContent}
-        />
+      <TextareaAutosize
+      name="content"
+      style= {{borderColor: "black", backgroundColor: "white", color: "black", fontSize: 20}}
+      minRows={10}
+      onChange={onChangeContent}
+      value={content}
+      defaultValue="type your template here..."
+     />
 
       <br />
       <div className="template-button">
@@ -62,6 +68,7 @@ function WriteArticle(props) {
           >Share
         </Button>
       </div>
+
     </div>
   );
 }
