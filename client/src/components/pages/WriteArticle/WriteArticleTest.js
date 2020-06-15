@@ -4,16 +4,12 @@ import GenerateLetter from './GenerateLetter';
 import SubmitButton from './SubmitButton';
 import InputInfo from './InputInfo';
 
-function WriteArticle(props) {
+function WriteArticleTest(props) {
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
   const [officialInfo, setOfficialInfo] = useState('');
   const [reason, setReason] = useState('');
   const [content, setContent] = useState('');
-
-  function inputContent(event) {
-    setContent(event.target.value);
-  }
 
   function inputName(event) {
     setName(event.target.value);
@@ -32,6 +28,10 @@ function WriteArticle(props) {
     setReason(event.target.value);
   }
 
+  function inputContent(event) {
+    setContent(event.target.value);
+  }
+
   function submit() {
     console.log('submitted')
     const formData = {
@@ -39,7 +39,7 @@ function WriteArticle(props) {
       address: address,
       officialinfo: officialInfo,
       reason: reason,
-      text: content,
+      content: content,
     };
     // Can also be written:
     // const formData = {title, text: content};
@@ -62,13 +62,10 @@ function WriteArticle(props) {
     <div className="Container">
     <div className="WriteArticle">
       <h1>My information:</h1>
-      <input
-          name="name"
-          placeholder="Name"
-          value={name}
-          onChange={inputName}
-        />
-      <br />
+      <InputInfo
+        
+      />
+
 
       <input
           address="address"
@@ -102,7 +99,7 @@ function WriteArticle(props) {
         />
 
       <br />
-
+      
       <div className="SubmitButton"> 
         <SubmitButton
           submit = {submit}
@@ -118,11 +115,10 @@ function WriteArticle(props) {
         reason = {reason}
         content = {content}
       />   
-   
 
     </div>
     </div>
   );
 }
 
-export default WriteArticle;
+export default WriteArticleTest;

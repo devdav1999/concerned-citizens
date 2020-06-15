@@ -1,6 +1,6 @@
 .Container {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .WriteArticle {
@@ -8,7 +8,7 @@
 }
 
 .GenerateLetter {
-	grid-column: 2 / span 2;
+	grid-column: 3 / span 3;
 }
 
 .WriteArticle input,
