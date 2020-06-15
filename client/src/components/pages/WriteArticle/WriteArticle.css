@@ -10,7 +10,33 @@
   border: 2px solid white;
 }
 
-.WriteArticle button {
+
+ .template-button {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.template-header{
+  text-align: center;
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-top: -50px;
+}
+
+.templatePage-logo{
+  max-height: 300px;
+}
+
+p{
   color: black;
-  background: #61dafb;
+}
+
+.subHeader{
+  text-align: center;
+  font-size: 26px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
 }
