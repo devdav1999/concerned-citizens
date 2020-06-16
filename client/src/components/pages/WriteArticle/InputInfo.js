@@ -24,6 +24,26 @@ function InputInfo(props) {
         <br />
         </div>
 
+        <div className="InputOfficialInfo">
+          <input
+            officialInfo="officialInfo"
+            placeholder="Official's Name"
+            value={props.officialInfo}
+            onChange={props.inputOfficialInfo}
+          />
+        <br />
+        </div>
+
+        <div className="InputReason">
+          <input
+            reason="reason"
+            placeholder="Reason Why You Are Writing"
+            value={props.reason}
+            onChange={props.inputReason}
+          />
+        <br />
+        </div>
+
 
       </div>
     );

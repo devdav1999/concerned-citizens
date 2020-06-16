@@ -3,6 +3,7 @@ import './WriteArticle.css';
 import GenerateLetter from './GenerateLetter';
 import SubmitButton from './SubmitButton';
 import InputInfo from './InputInfo';
+import Contents from './Contents';
 
 function WriteArticleTest(props) {
   const [name, setName] = useState('');
@@ -13,7 +14,7 @@ function WriteArticleTest(props) {
 
   function inputName(event) {
     setName(event.target.value);
-    console.log('inputName being clicked');
+    console.log('setName being clicked');
   }
 
   function inputAddress(event) {
@@ -64,34 +65,30 @@ function WriteArticleTest(props) {
       <h1>My information:</h1>
       <InputInfo
 
-       InfoName 
-       InfoAddress
+        InputName
+        name = {name}
+        inputName = {inputName}
+
+        InputAddress
+        address = {address}
+        inputAddress = {inputAddress}
+
+        InputOfficialInfo
+        officialinfo = {officialInfo}
+        inputOfficialInfo = {inputOfficialInfo}
+
+        InputReason
+        reason = {reason}
+        inputReason = {inputReason}
+
       />
 
-      <input
-          officialinfo="officialInfo"
-          placeholder="Official's Name"
-          value={officialInfo}
-          onChange={inputOfficialInfo}
+      <div className="Contents"> 
+        <Contents
+          content = {content}
+          inputContent = {inputContent}
         />
-      <br />
-
-      <input
-          reason="reason"
-          placeholder="Reason Why You Are Writing"
-          value={reason}
-          onChange={inputReason}
-        />
-      <br />
-
-      <textarea
-          name="content"
-          placeholder="Contents"
-          value={content}
-          onChange={inputContent}
-        />
-
-      <br />
+      </div>
       
       <div className="SubmitButton"> 
         <SubmitButton
