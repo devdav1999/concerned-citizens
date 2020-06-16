@@ -13,6 +13,18 @@ function InputInfo(props) {
           />
         <br />
         </div>
+
+        <div className="InputAddress">
+          <input
+            name="address"
+            placeholder="Address"
+            value={props.address}
+            onChange={props.inputAddress}
+          />
+        <br />
+        </div>
+
+
       </div>
     );
 }

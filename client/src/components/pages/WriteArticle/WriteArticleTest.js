@@ -63,17 +63,10 @@ function WriteArticleTest(props) {
     <div className="WriteArticle">
       <h1>My information:</h1>
       <InputInfo
-        
+
+       InfoName 
+       InfoAddress
       />
-
-
-      <input
-          address="address"
-          placeholder="Address"
-          value={address}
-          onChange={inputAddress}
-        />
-      <br />
 
       <input
           officialinfo="officialInfo"
