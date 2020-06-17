@@ -105,6 +105,7 @@ function Blog() {
 
   return (
 
+
       <div className="Container">
         <div className="WriteArticle">
           <h1>My Information:</h1>
@@ -133,10 +134,32 @@ function Blog() {
 
             />
 
+<div className="Blog">
+      <h1>Blog</h1>
+      {
+        blogPosts.map((post, index) => (
+          <div className="Blog-article" key={post._id}>
+
+            <h1>{post.title}</h1>
+            <p>{post.text}</p>
+
+            <div className="Blog-articleActions">
+              <div onClick={() => deleteArticle(post._id)}>
+                <span alt="delete this">🗑</span>
+              </div>
+              <div onClick={() => voteArticle(post)}>
+                <span alt="upvote this">⬆ {post.voteCount}</span>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    
       <SubmitButton 
 
       />
-      
+
       </div>
             
       <div className="GenerateLetter">
