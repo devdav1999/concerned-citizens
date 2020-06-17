@@ -11,6 +11,8 @@
   grid-column: 3 / span 3;
 }
 
+
+
 /* original below 
 
 .Blog {
@@ -23,6 +25,7 @@
   padding: 10px;
   margin: 10px;
   position: relative;
+  border: 2px solid black;
 }
 
 .Blog-articleActions > div {
@@ -41,4 +44,11 @@
   left: 10px;
 }
 
+.Blog-article > p {
+  white-space: pre-line;
+}
 
+.InputName > input{
+  border: 2px solid black;
+
+}

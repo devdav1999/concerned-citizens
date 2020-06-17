@@ -134,8 +134,22 @@ function Blog() {
 
             />
 
-<div className="Blog">
-      <h1>Blog</h1>
+            <SubmitButton />
+
+      </div>
+            
+      <div className="GenerateLetter">
+
+        {/* <GenerateLetter
+          name = {name}
+          address = {address}
+          officialinfo = {officialInfo}
+          reason = {reason}
+          content = {content}
+      /> */}
+      
+      <div className="Blog">
+      <h1>Your Letter</h1>
       {
         blogPosts.map((post, index) => (
           <div className="Blog-article" key={post._id}>
@@ -154,23 +168,10 @@ function Blog() {
           </div>
         ))
       }
-    </div>
-    
-      <SubmitButton 
-
-      />
-
       </div>
-            
-      <div className="GenerateLetter">
 
-        <GenerateLetter
-          name = {name}
-          address = {address}
-          officialinfo = {officialInfo}
-          reason = {reason}
-          content = {content}
-      />
+
+
 
       </div>
     </div>
