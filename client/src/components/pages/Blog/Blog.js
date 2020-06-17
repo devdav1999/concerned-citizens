@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import GenerateLetter from './GenerateLetter';
 import InputInfo from './InputInfo';
 import './Blog.css';
+import SubmitButton from './SubmitButton';
+// import Contents from './Contents';
 
 function Blog() {
   const [blogPosts, setBlogPosts] = useState([]);
@@ -41,6 +43,7 @@ function Blog() {
       reason: reason,
       content: content,
     };
+  }
 
   function fetchPosts() {
     console.log('Fetching data from API');
@@ -101,6 +104,7 @@ function Blog() {
   useEffect(fetchPosts, []);
 
   return (
+
       <div className="Container">
         <div className="WriteArticle">
           <h1>My Information:</h1>
@@ -128,9 +132,13 @@ function Blog() {
                 inputContent = {inputContent}
 
             />
+
+      <SubmitButton 
+
+      />
+      
       </div>
             
-
       <div className="GenerateLetter">
 
         <GenerateLetter
@@ -139,7 +147,7 @@ function Blog() {
           officialinfo = {officialInfo}
           reason = {reason}
           content = {content}
-      />   
+      />
 
       </div>
     </div>
