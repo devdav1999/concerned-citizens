@@ -1,0 +1,54 @@
+.Container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.WriteArticle {
+  grid-column: 1;
+}
+
+.GenerateLetter {
+  grid-column: 3 / span 3;
+}
+
+
+
+/* original below 
+
+.Blog {
+}
+
+*/
+
+.Share-article {
+  background: white;
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+  border: 2px solid black;
+}
+
+.Share-articleActions > div {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.Blog-articleActions > div:first-child {
+  right: 10px;
+}
+
+.Blog-articleActions > div:last-child {
+  left: 10px;
+}
+
+.Blog-article > p {
+  white-space: pre-line;
+}
+
+.InputName > input{
+  border: 2px solid black;
+
+}
