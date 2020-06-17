@@ -1,8 +1,46 @@
 import React, { useState, useEffect } from 'react';
+import GenerateLetter from './GenerateLetter';
+import InputInfo from './InputInfo';
 import './Blog.css';
 
 function Blog() {
   const [blogPosts, setBlogPosts] = useState([]);
+  const [name, setName] = useState('');
+  const [address, setAddress] = useState('');
+  const [officialInfo, setOfficialInfo] = useState('');
+  const [reason, setReason] = useState('');
+  const [content, setContent] = useState('');
+
+  function inputName(event) {
+    setName(event.target.value);
+    console.log('setName being clicked');
+  }
+
+  function inputAddress(event) {
+    setAddress(event.target.value);
+  }
+
+  function inputOfficialInfo(event) {
+    setOfficialInfo(event.target.value);
+  }
+
+  function inputReason(event) {
+    setReason(event.target.value);
+  }
+
+  function inputContent(event) {
+    setContent(event.target.value);
+  }
+
+  function submit() {
+    console.log('submitted')
+    const formData = {
+      name: name,
+      address: address,
+      officialinfo: officialInfo,
+      reason: reason,
+      content: content,
+    };
 
   function fetchPosts() {
     console.log('Fetching data from API');
@@ -63,26 +101,47 @@ function Blog() {
   useEffect(fetchPosts, []);
 
   return (
-    <div className="Blog">
-      <h1>Blog</h1>
-      {
-        blogPosts.map((post, index) => (
-          <div className="Blog-article" key={post._id}>
+      <div className="Container">
+        <div className="WriteArticle">
+          <h1>My Information:</h1>
 
-            <h1>{post.title}</h1>
-            <p>{post.text}</p>
+            <InputInfo
 
-            <div className="Blog-articleActions">
-              <div onClick={() => deleteArticle(post._id)}>
-                <span alt="delete this">🗑</span>
-              </div>
-              <div onClick={() => voteArticle(post)}>
-                <span alt="upvote this">⬆ {post.voteCount}</span>
-              </div>
-            </div>
-          </div>
-        ))
-      }
+              InputName
+                name = {name}
+                inputName = {inputName}
+
+              InputAddress
+                address = {address}
+                inputAddress = {inputAddress}
+
+              InputOfficialInfo
+                officialinfo = {officialInfo}
+                inputOfficialInfo = {inputOfficialInfo}
+
+              InputReason
+                reason = {reason}
+                inputReason = {inputReason}
+
+              InputContent
+                inputContent ={content}
+                inputContent = {inputContent}
+
+            />
+      </div>
+            
+
+      <div className="GenerateLetter">
+
+        <GenerateLetter
+          name = {name}
+          address = {address}
+          officialinfo = {officialInfo}
+          reason = {reason}
+          content = {content}
+      />   
+
+      </div>
     </div>
   );
 }

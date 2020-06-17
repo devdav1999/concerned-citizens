@@ -1,5 +1,22 @@
+.Container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.WriteArticle {
+  grid-column: 1;
+}
+
+.GenerateLetter {
+  grid-column: 3 / span 3;
+}
+
+/* original below 
+
 .Blog {
 }
+
+*/
 
 .Blog-article {
   background: white;
