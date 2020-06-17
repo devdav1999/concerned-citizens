@@ -22,7 +22,7 @@ function LandingPage() {
         depth = "tall"
         shape = "square"
         >
-        <Link to="/write/">Compose</Link>
+        <Link to="/compose/">Compose</Link>
         </Button>
       </header>
     </div>

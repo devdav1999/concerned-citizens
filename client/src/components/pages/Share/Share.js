@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import GenerateLetter from './GenerateLetter';
 import InputInfo from './InputInfo';
-import './Blog.css';
+import './Share.css';
 import SubmitButton from './SubmitButton';
 // import Contents from './Contents';
 
-function Blog() {
-  const [blogPosts, setBlogPosts] = useState([]);
+function Share() {
+  const [sharePosts, setSharePosts] = useState([]);
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
   const [officialInfo, setOfficialInfo] = useState('');
@@ -51,7 +51,7 @@ function Blog() {
       .then(response => response.json())
       .then(data => {
         console.log('Got data back', data);
-        setBlogPosts(data);
+        setSharePosts(data);
       });
   }
 
@@ -107,7 +107,7 @@ function Blog() {
 
 
       <div className="Container">
-        <div className="WriteArticle">
+        <div className="ComposeTemplate">
           <h1>My Information:</h1>
 
             <InputInfo
@@ -148,16 +148,16 @@ function Blog() {
           content = {content}
       /> */}
       
-      <div className="Blog">
+      <div className="Share">
       <h1>Your Letter</h1>
       {
-        blogPosts.map((post, index) => (
-          <div className="Blog-article" key={post._id}>
+        sharePosts.map((post, index) => (
+          <div className="Share-article" key={post._id}>
 
             <h1>{post.title}</h1>
             <p>{post.text}</p>
 
-            <div className="Blog-articleActions">
+            <div className="Share-articleActions">
               <div onClick={() => deleteArticle(post._id)}>
                 <span alt="delete this">🗑</span>
               </div>
@@ -178,4 +178,4 @@ function Blog() {
   );
 }
 
-export default Blog;
+export default Share;

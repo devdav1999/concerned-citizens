@@ -1,5 +1,5 @@
 import React from 'react';
-import './Blog.css';
+import './Share.css';
 
 function Contents(props) {
 	return (
