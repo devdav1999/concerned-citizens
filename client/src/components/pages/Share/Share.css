@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-.WriteArticle {
+.ComposeTemplate {
   grid-column: 1;
 }
 
@@ -15,12 +15,12 @@
 
 /* original below 
 
-.Blog {
+.Share {
 }
 
 */
 
-.Blog-article {
+.Share-article {
   background: white;
   padding: 10px;
   margin: 10px;
@@ -28,7 +28,7 @@
   border: 2px solid black;
 }
 
-.Blog-articleActions > div {
+.Share-articleActions > div {
   display: inline-block;
   position: absolute;
   top: 10px;

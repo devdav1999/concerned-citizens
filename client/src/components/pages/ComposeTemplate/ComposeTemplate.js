@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Button } from 'kc-react-widgets';
-import './WriteArticle.css';
+import './ComposeTemplate.css';
 import logo from './logo2.png';
 import TextareaAutosize from 'react-textarea-autosize';
 
-function WriteArticle(props) {
+function ComposeTemplate(props) {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
@@ -31,13 +31,13 @@ function WriteArticle(props) {
       .then(data => {
         console.log('Got this back', data);
 
-        // Redirect to blog
-        props.history.push('/blog/');
+        // Redirect to share
+        props.history.push('/share/');
       });
   }
 
   return (
-    <div className="WriteArticle">
+    <div className="ComposeTemplate">
       <header className="template-header">
       <img src={logo} className="templatePage-logo" alt="Concerned Citizens Logo"/>
       <p><strong>Compose Your Template</strong></p>
@@ -73,4 +73,4 @@ function WriteArticle(props) {
   );
 }
 
-export default WriteArticle;
+export default ComposeTemplate;

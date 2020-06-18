@@ -1,6 +1,6 @@
-.WriteArticle input,
-.WriteArticle textarea,
-.WriteArticle button {
+.ComposeTemplate input,
+.ComposeTemplate textarea,
+.ComposeTemplate button {
   font-size: 12pt;
   background: none;
   color: white;
