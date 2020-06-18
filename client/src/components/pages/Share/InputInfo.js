@@ -34,26 +34,6 @@ function InputInfo(props) {
         <br />
         </div>
 
-        <div className="InputReason">
-          <input
-            reason="reason"
-            placeholder="Reason Why You Are Writing"
-            value={props.reason}
-            onChange={props.inputReason}
-          />
-        <br />
-        </div>
-
-        <div className="Contents">
-          <textarea
-           content="content"
-           placeholder="Contents"
-           value={props.content}
-           onChange={props.inputContent}
-        />
-        <br />
-        </div>
-
 
       </div>
     );

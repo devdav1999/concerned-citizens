@@ -124,13 +124,6 @@ function Share() {
                 officialinfo = {officialInfo}
                 inputOfficialInfo = {inputOfficialInfo}
 
-              InputReason
-                reason = {reason}
-                inputReason = {inputReason}
-
-              InputContent
-                inputContent ={content}
-                inputContent = {inputContent}
 
             />
 
@@ -157,14 +150,14 @@ function Share() {
             <h1>{post.title}</h1>
             <p>{post.text}</p>
 
-            {/* <div className="Share-articleActions">
+            <div className="Share-articleActions">
               <div onClick={() => deleteArticle(post._id)}>
                 <span alt="delete this">🗑</span>
               </div>
-              <div onClick={() => voteArticle(post)}>
+              {/* <div onClick={() => voteArticle(post)}>
                 <span alt="upvote this">⬆ {post.voteCount}</span>
-              </div>
-            </div> */}
+              </div> */}
+            </div>
           </div>
         ))
       }
