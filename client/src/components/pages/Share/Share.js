@@ -10,8 +10,7 @@ function Share() {
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
   const [officialInfo, setOfficialInfo] = useState('');
-  const [reason, setReason] = useState('');
-  const [content, setContent] = useState('');
+ 
 
   function inputName(event) {
     setName(event.target.value);
@@ -26,13 +25,6 @@ function Share() {
     setOfficialInfo(event.target.value);
   }
 
-  function inputReason(event) {
-    setReason(event.target.value);
-  }
-
-  function inputContent(event) {
-    setContent(event.target.value);
-  }
 
   function submit() {
     console.log('submitted')
@@ -40,8 +32,6 @@ function Share() {
       name: name,
       address: address,
       officialinfo: officialInfo,
-      reason: reason,
-      content: content,
     };
   }
 
@@ -148,7 +138,13 @@ function Share() {
           <div className="Share-article" key={post._id}>
 
             <h1>{post.title}</h1>
-            <p>{post.text}</p>
+            <p>{address}</p>
+            <br />
+            <br />
+            <p>Dear {officialInfo},</p>
+            <p>My name is {name}. {post.text}</p>
+            <p>Sincerely,</p>
+            <p>{name}</p>
 
             <div className="Share-articleActions">
               <div onClick={() => deleteArticle(post._id)}>
