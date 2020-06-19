@@ -3,8 +3,6 @@ import GenerateLetter from './GenerateLetter';
 import InputInfo from './InputInfo';
 import './Share.css';
 import SubmitButton from './SubmitButton';
-// import {CopyToClipboard} from 'react-copy-to-clipboard';
-import { Button } from 'kc-react-widgets';
 // import Contents from './Contents';
 
 function Share() {
@@ -12,6 +10,7 @@ function Share() {
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
   const [officialInfo, setOfficialInfo] = useState('');
+  const [date, setDate] = useState('');
  
 
   function inputName(event) {
@@ -27,6 +26,9 @@ function Share() {
     setOfficialInfo(event.target.value);
   }
 
+  function inputDate(event) {
+    setDate(event.target.value);
+  }
 
   function submit() {
     console.log('submitted')
@@ -104,6 +106,10 @@ function Share() {
 
             <InputInfo
 
+              InputDate
+                date = {date}
+                inputDate = {inputDate}
+
               InputName
                 name = {name}
                 inputName = {inputName}
@@ -140,8 +146,8 @@ function Share() {
           <div className="Share-article" key={post._id}>
 
             <h1>{post.title}</h1>
+            <p>{date}</p>
             <p>{address}</p>
-            <br />
             <br />
             <p>Dear {officialInfo},</p>
             <p>My name is {name}. {post.text}</p>
@@ -163,9 +169,7 @@ function Share() {
 
       <br />
 
-      {/* <CopyToClipboard text={window.location.host + "/share/"}>
-      <Button>Copy Link to Share With Friends </Button>
-      </CopyToClipboard> */}
+      
 
 
 

@@ -1,13 +1,25 @@
 import React from 'react';
+import TextareaAutosize from 'react-textarea-autosize';
 import './Share.css';
 
 function InputInfo(props) {
 	return (
       <div className="InputInfo">
+
+        <div className="InputDate">
+          <input
+            name="date"
+            placeholder="Today's Date"
+            value={props.date}
+            onChange={props.inputDate}
+          />
+        <br />
+        </div>
+
         <div className="InputName">
           <input
             name="name"
-            placeholder="Name"
+            placeholder="Your Name"
             value={props.name}
             onChange={props.inputName}
           />
@@ -15,9 +27,11 @@ function InputInfo(props) {
         </div>
 
         <div className="InputAddress">
-          <input
+          <TextareaAutosize
             name="address"
-            placeholder="Address"
+            placeholder="Official's Address"
+            minRows={3}
+            style={{borderColor: "black", backgroundColor: "white", color: "black", fontSize: 12}}
             value={props.address}
             onChange={props.inputAddress}
           />
