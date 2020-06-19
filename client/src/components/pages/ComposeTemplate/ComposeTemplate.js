@@ -5,7 +5,6 @@ import logo from './logo2.png';
 import TextareaAutosize from 'react-textarea-autosize';
 
 function ComposeTemplate(props) {
-  const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
   function onChangeContent(ev) {
@@ -16,7 +15,6 @@ function ComposeTemplate(props) {
 
   function submit() {
     const formData = {
-      title: title,
       text: content,
     };
     // Can also be written:

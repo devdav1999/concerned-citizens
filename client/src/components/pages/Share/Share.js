@@ -10,8 +10,8 @@ function Share() {
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
   const [officialInfo, setOfficialInfo] = useState('');
-  const [reason, setReason] = useState('');
-  const [content, setContent] = useState('');
+  const [date, setDate] = useState('');
+ 
 
   function inputName(event) {
     setName(event.target.value);
@@ -26,12 +26,8 @@ function Share() {
     setOfficialInfo(event.target.value);
   }
 
-  function inputReason(event) {
-    setReason(event.target.value);
-  }
-
-  function inputContent(event) {
-    setContent(event.target.value);
+  function inputDate(event) {
+    setDate(event.target.value);
   }
 
   function submit() {
@@ -40,8 +36,6 @@ function Share() {
       name: name,
       address: address,
       officialinfo: officialInfo,
-      reason: reason,
-      content: content,
     };
   }
 
@@ -112,6 +106,10 @@ function Share() {
 
             <InputInfo
 
+              InputDate
+                date = {date}
+                inputDate = {inputDate}
+
               InputName
                 name = {name}
                 inputName = {inputName}
@@ -131,7 +129,7 @@ function Share() {
 
       </div>
             
-      <div className="GenerateLetter">
+    <div className="GenerateLetter">
 
         {/* <GenerateLetter
           name = {name}
@@ -148,7 +146,13 @@ function Share() {
           <div className="Share-article" key={post._id}>
 
             <h1>{post.title}</h1>
-            <p>{post.text}</p>
+            <p>{date}</p>
+            <p>{address}</p>
+            <br />
+            <p>Dear {officialInfo},</p>
+            <p>My name is {name}. {post.text}</p>
+            <p>Sincerely,</p>
+            <p>{name}</p>
 
             <div className="Share-articleActions">
               <div onClick={() => deleteArticle(post._id)}>
@@ -163,6 +167,9 @@ function Share() {
       }
       </div>
 
+      <br />
+
+      
 
 
 
