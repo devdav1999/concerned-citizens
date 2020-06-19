@@ -3,6 +3,8 @@ import GenerateLetter from './GenerateLetter';
 import InputInfo from './InputInfo';
 import './Share.css';
 import SubmitButton from './SubmitButton';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
+import { Button } from 'kc-react-widgets';
 // import Contents from './Contents';
 
 function Share() {
@@ -121,7 +123,7 @@ function Share() {
 
       </div>
             
-      <div className="GenerateLetter">
+    <div className="GenerateLetter">
 
         {/* <GenerateLetter
           name = {name}
@@ -159,6 +161,11 @@ function Share() {
       }
       </div>
 
+      <br />
+
+      <CopyToClipboard text={window.location.host + "/share/"}>
+      <Button>Copy Link to Share With Friends </Button>
+      </CopyToClipboard>
 
 
 
