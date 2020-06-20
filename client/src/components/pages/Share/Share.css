@@ -1,14 +1,19 @@
 .Container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  display: flex;
+  /* gap: 80px; */
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
 }
 
 .ComposeTemplate {
-  grid-column: 1;
+  /* grid-column: 1; */
+  flex: 2;
+  margin-right: 80px;
+  
 }
 
 .GenerateLetter {
-  grid-column: 3 / span 3;
+  /* grid-column: 3 / span 3; */
+  flex: 3
 }
 
 
