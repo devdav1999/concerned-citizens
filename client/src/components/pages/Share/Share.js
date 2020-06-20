@@ -134,8 +134,11 @@ function Share() {
 
             />
 
-            <SubmitButton />
-
+          <div className="SubmitButton">
+            <SubmitButton
+              submit = {submit}
+            />
+          </div>
       </div>
             
       <div className="GenerateLetter">
