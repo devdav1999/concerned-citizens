@@ -11,6 +11,7 @@ function Share() {
   const [address, setAddress] = useState('');
   const [officialInfo, setOfficialInfo] = useState('');
   const [date, setDate] = useState('');
+  const [sidebarIsShowing, setSidebarIsShowing] = useState(true)
  
 
   function inputName(event) {
@@ -31,12 +32,7 @@ function Share() {
   }
 
   function submit() {
-    console.log('submitted')
-    const formData = {
-      name: name,
-      address: address,
-      officialinfo: officialInfo,
-    };
+    setSidebarIsShowing(false);
   }
 
   function fetchPosts() {
@@ -101,7 +97,8 @@ function Share() {
 
 
       <div className="Container">
-        <div className="ComposeTemplate">
+        {sidebarIsShowing ?
+          <div className="ComposeTemplate">
           <h1>My Information:</h1>
 
             <InputInfo
@@ -125,9 +122,11 @@ function Share() {
 
             />
 
-            <SubmitButton />
+            <SubmitButton
+            submit = {submit}
+             />
 
-      </div>
+      </div> : null}
             
     <div className="GenerateLetter">
 
