@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Button } from 'kc-react-widgets';
-import './ComposeTemplate.css';
+import './WriteArticle.css';
 import logo from './logo2.png';
 import TextareaAutosize from 'react-textarea-autosize';
 
-function ComposeTemplate(props) {
+function WriteArticle(props) {
+  const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
   function onChangeContent(ev) {
@@ -15,12 +16,13 @@ function ComposeTemplate(props) {
 
   function submit() {
     const formData = {
+      title: title,
       text: content,
     };
     // Can also be written:
     // const formData = {title, text: content};
 
-    fetch('/api/mongodb/test_4/', {
+    fetch('/api/mongodb/templates/', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(formData),
@@ -29,13 +31,13 @@ function ComposeTemplate(props) {
       .then(data => {
         console.log('Got this back', data);
 
-        // Redirect to share
-        props.history.push('/share/');
+        // Redirect to blog
+        props.history.push('/blog/');
       });
   }
 
   return (
-    <div className="ComposeTemplate">
+    <div className="WriteArticle">
       <header className="template-header">
       <img src={logo} className="templatePage-logo" alt="Concerned Citizens Logo"/>
       <p><strong>Compose Your Template</strong></p>
@@ -71,4 +73,4 @@ function ComposeTemplate(props) {
   );
 }
 
-export default ComposeTemplate;
+export default WriteArticle;

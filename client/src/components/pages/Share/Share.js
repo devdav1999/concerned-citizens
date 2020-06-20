@@ -41,7 +41,7 @@ function Share() {
 
   function fetchPosts() {
     console.log('Fetching data from API');
-    fetch('/api/mongodb/blogposts/')
+    fetch('/api/mongodb/test_4/')
       .then(response => response.json())
       .then(data => {
         console.log('Got data back', data);
@@ -52,7 +52,7 @@ function Share() {
   function deleteArticle(documentId) {
     console.log('Sending DELETE for', documentId);
     // Do the DELETE, using "?_id=" to specify which document we are deleting
-    fetch('/api/mongodb/blogposts/?_id=' + documentId, {
+    fetch('/api/mongodb/test_4/?_id=' + documentId, {
         method: 'DELETE',
       })
       .then(response => response.json())
@@ -80,7 +80,7 @@ function Share() {
 
     // Do the PUT, using "?_id=" to specify which document we are affecting
     const documentId = article._id;
-    fetch('/api/mongodb/blogposts/?_id=' + documentId, {
+    fetch('/api/mongodb/test_4/?_id=' + documentId, {
         method: 'PUT',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(formData),

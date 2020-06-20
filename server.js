@@ -37,14 +37,17 @@ app.get('/api/mongodb/:collectionName/', (request, response) => {
 });
 
 // POST for creating a new item
+// DO a console log here 
 app.post('/api/mongodb/:collectionName/', (request, response) => {
   const collectionName = request.params.collectionName;
   const data = request.body;
 
   db.collection(collectionName)
     .insert(data, (err, results) => {
+      
       // Got data back.. send to client
       if (err) throw err;
+      //Console.log the word suceeded 
 
       response.json({
         'success': true,
