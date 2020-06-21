@@ -51,7 +51,7 @@ test - name of collection
 
 5. Screenshots of the app
 
-![Screenshot](./client/public/screenshot1.png)
-![Screenshot](./client/public/screenshot2.png)
-![Screenshot](./client/public/screenshot3.png)
+![Screenshot](./client/public/screenshot4.png)
+![Screenshot](./client/public/screenshot5.png)
+![Screenshot](./client/public/screenshot6.png)
 
