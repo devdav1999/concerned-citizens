@@ -1,29 +1,16 @@
 .Container {
   display: flex;
-  /* gap: 80px; */
-  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
 }
 
 .ComposeTemplate {
-  /* grid-column: 1; */
   flex: 2;
   margin-right: 80px;
   
 }
 
-.GenerateLetter {
-  /* grid-column: 3 / span 3; */
+.GenerateLetter 
   flex: 3
 }
-
-
-
-/* original below 
-
-.Share {
-}
-
-*/
 
 .Share-article {
   background: white;

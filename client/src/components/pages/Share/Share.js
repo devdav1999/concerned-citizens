@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Button } from 'kc-react-widgets';
+import { Link, Switch, Route } from 'react-router-dom';
 import GenerateLetter from './GenerateLetter';
 import InputInfo from './InputInfo';
 import './Share.css';
 import SubmitButton from './SubmitButton';
+
 // import Contents from './Contents';
 
 function Share() {
@@ -124,9 +127,25 @@ function Share() {
 
             <SubmitButton
             submit = {submit}
-             />
+            />
 
+            <Button
+        type = "default"
+        size = "medium"
+        depth = "flat"
+        shape = "square"
+        style = {{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+        >
+        <Link to="/compose/">Back</Link>
+        </Button>
+              
       </div> : null}
+
+
             
     <div className="GenerateLetter">
 
@@ -137,7 +156,8 @@ function Share() {
           reason = {reason}
           content = {content}
       /> */}
-      
+
+    
       <div className="Share">
       <h1>Your Letter</h1>
       {
