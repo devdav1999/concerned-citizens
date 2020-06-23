@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import {Button} from 'kc-react-widgets';
+import { Link } from 'react-router-dom';
 import GenerateLetter from './GenerateLetter';
 import InputInfo from './InputInfo';
 import './Share.css';
@@ -95,7 +97,6 @@ function Share() {
 
   return (
 
-
       <div className="Container">
         {sidebarIsShowing ?
           <div className="ComposeTemplate">
@@ -119,25 +120,30 @@ function Share() {
                 officialinfo = {officialInfo}
                 inputOfficialInfo = {inputOfficialInfo}
 
-
             />
 
             <SubmitButton
             submit = {submit}
              />
 
-      </div> : null}
-            
-    <div className="GenerateLetter">
+            <Button
+              type = "default"
+              size = "medium"
+              depth = "flat"
+              shape = "square"
+              style = {{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+            <Link to="/compose/">←</Link>
+            </Button>
 
-        {/* <GenerateLetter
-          name = {name}
-          address = {address}
-          officialinfo = {officialInfo}
-          reason = {reason}
-          content = {content}
-      /> */}
-      
+      </div> : null}
+
+      <div className="GenerateLetter">
+
       <div className="Share">
       <h1>Your Letter</h1>
       {
@@ -167,10 +173,6 @@ function Share() {
       </div>
 
       <br />
-
-      
-
-
 
       </div>
     </div>
