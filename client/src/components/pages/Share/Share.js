@@ -5,6 +5,8 @@ import GenerateLetter from './GenerateLetter';
 import InputInfo from './InputInfo';
 import './Share.css';
 import SubmitButton from './SubmitButton';
+import {Button} from 'kc-react-widgets';
+import { Link } from 'react-router-dom';
 // import Contents from './Contents';
 
 function Share() {
@@ -134,7 +136,11 @@ function Share() {
               style = {{
                 display: "flex",
                 justifyContent: "center",
+<<<<<<< HEAD
                 alignItems: "center",
+=======
+                alignItems: "center"
+>>>>>>> 46c4659aba8894674384aa082f29474c7db5676c
               }}
             >
             <Link to="/compose/">←</Link>
@@ -142,8 +148,23 @@ function Share() {
 
       </div> : null}
 
+<<<<<<< HEAD
       <div className="GenerateLetter">
 
+=======
+  
+            
+    <div className="GenerateLetter">
+
+        {/* <GenerateLetter
+          name = {name}
+          address = {address}
+          officialinfo = {officialInfo}
+          reason = {reason}
+          content = {content}
+      /> */}
+      
+>>>>>>> 46c4659aba8894674384aa082f29474c7db5676c
       <div className="Share">
       <h1>Your Letter</h1>
       {
