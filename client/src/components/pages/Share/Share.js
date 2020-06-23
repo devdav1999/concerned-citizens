@@ -3,6 +3,8 @@ import GenerateLetter from './GenerateLetter';
 import InputInfo from './InputInfo';
 import './Share.css';
 import SubmitButton from './SubmitButton';
+import {Button} from 'kc-react-widgets';
+import { Link } from 'react-router-dom';
 // import Contents from './Contents';
 
 function Share() {
@@ -126,7 +128,23 @@ function Share() {
             submit = {submit}
              />
 
+            <Button
+              type = "default"
+              size = "medium"
+              depth = "flat"
+              shape = "square"
+              style = {{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+              }}
+            >
+            <Link to="/compose/">←</Link>
+            </Button>
+
       </div> : null}
+
+  
             
     <div className="GenerateLetter">
 
