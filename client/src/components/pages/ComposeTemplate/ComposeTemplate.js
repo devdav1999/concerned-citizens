@@ -20,7 +20,7 @@ function ComposeTemplate(props) {
     // Can also be written:
     // const formData = {title, text: content};
 
-    fetch('/api/mongodb/test_4/', {
+    fetch('/api/mongodb/data/', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(formData),
