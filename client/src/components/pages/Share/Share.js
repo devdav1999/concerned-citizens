@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import {Button} from 'kc-react-widgets';
 import { Link } from 'react-router-dom';
-import GenerateLetter from './GenerateLetter';
 import InputInfo from './InputInfo';
 import './Share.css';
 import SubmitButton from './SubmitButton';
-import {Button} from 'kc-react-widgets';
-import { Link } from 'react-router-dom';
-// import Contents from './Contents';
 
 function Share() {
   const [sharePosts, setSharePosts] = useState([]);
@@ -64,35 +60,6 @@ function Share() {
       });
   }
 
-  function voteArticle(article) {
-    let newVoteCount = article.voteCount;
-
-    // Increase the vote count 
-    if (!newVoteCount) {
-      newVoteCount = 1;
-    } else {
-      newVoteCount++;
-    }
-
-    const formData = {
-      voteCount: newVoteCount,
-    };
-
-    // Do the PUT, using "?_id=" to specify which document we are affecting
-    const documentId = article._id;
-    fetch('/api/mongodb/test_4/?_id=' + documentId, {
-        method: 'PUT',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(formData),
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Got this back', data);
-
-        // Call method to refresh data
-        fetchPosts();
-      });
-  }
 
   // Invoke fetchPosts on initial load
   useEffect(fetchPosts, []);
@@ -136,11 +103,7 @@ function Share() {
               style = {{
                 display: "flex",
                 justifyContent: "center",
-<<<<<<< HEAD
                 alignItems: "center",
-=======
-                alignItems: "center"
->>>>>>> 46c4659aba8894674384aa082f29474c7db5676c
               }}
             >
             <Link to="/compose/">←</Link>
@@ -148,23 +111,8 @@ function Share() {
 
       </div> : null}
 
-<<<<<<< HEAD
       <div className="GenerateLetter">
 
-=======
-  
-            
-    <div className="GenerateLetter">
-
-        {/* <GenerateLetter
-          name = {name}
-          address = {address}
-          officialinfo = {officialInfo}
-          reason = {reason}
-          content = {content}
-      /> */}
-      
->>>>>>> 46c4659aba8894674384aa082f29474c7db5676c
       <div className="Share">
       <h1>Your Letter</h1>
       {
@@ -184,9 +132,6 @@ function Share() {
               <div onClick={() => deleteArticle(post._id)}>
                 <span alt="delete this">🗑</span>
               </div>
-              {/* <div onClick={() => voteArticle(post)}>
-                <span alt="upvote this">⬆ {post.voteCount}</span>
-              </div> */}
             </div>
           </div>
         ))
