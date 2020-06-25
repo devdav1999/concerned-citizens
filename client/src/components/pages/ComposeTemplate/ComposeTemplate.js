@@ -52,7 +52,7 @@ function ComposeTemplate(props) {
       minRows={10}
       onChange={onChangeContent}
       value={content}
-      defaultValue="type your template here..."
+      placeholder="type your template here..."
      />
 
       <br />
